@@ -1,0 +1,209 @@
+body{
+    font-family: 'Orbitron', 'Share Tech Mono', sans-serif;
+    color: white;
+}
+.content {
+    width: 400px;
+    height: 600px;
+    margin: 100px auto;
+    background: linear-gradient(to top ,#ff6a3d,#2e004f 100%);
+    border-radius: 15px;
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.playerface {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 20px 10px;
+    transition: all 0.5s;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    
+}
+.playerface.active{
+    left: 0;
+}
+.firstface{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    transition: all 0.5s;
+} 
+.firstface.active { 
+    left: -50%;
+}
+input {
+    display: none;
+}
+.firstface label {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px dashed white;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.5s;
+    max-width: 100%;
+    overflow: hidden;
+
+}
+.firstface label:hover {
+    color: #2e004f;
+    border: 1px dashed #2e004f;
+    transform: scale(1.2,1.2);
+}
+.firstface button {
+    background: none;
+    border: 2px solid #00ffe7;
+    font-size: 23px;
+    margin: 40px;
+    box-shadow: 0 0 10px #00ffe7;
+    padding: 10px 30px;
+    color: #00ffe7;
+    text-shadow: 0 0 3px #00ffe7;
+    border-radius: 35px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.firstface button:hover {
+    box-shadow: 0 0 30px #00ffe7;
+}
+.playerface .topcontent {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.playerface .topcontent p {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 80%;
+}
+.playerface .audiocontrol {
+    margin-top: 20px;
+    background-color: #1b1b1b;
+    width: 75%;
+    border-radius: 20px;
+    padding: 30px ;
+    color: #00ffe7;
+    text-shadow: 0 0 5px #66fff2;
+    box-shadow: 0 0 10px #000000db  ;
+}
+.playerface .audiocontrol .top {    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+i {
+    font-size: 40px;
+    cursor: pointer;
+}
+.circle {
+    box-shadow: 0 0 5px #66fff2;
+    border: 2px solid #66fff2;
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+.lineloading{
+    margin-top: 30px;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgb(97, 92, 92);
+    position: relative;
+}
+.lineloading .after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #00ffe7;
+    box-shadow: 0 0 5px #66fff2;
+    transition: all 0.5s;
+}
+.timer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.timer div{
+    color: white;
+    text-shadow: none;
+}
+.volume {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    align-items: center;
+    position: relative;
+
+}
+.volume i {
+    font-size: 20px;
+    font-weight: 600;
+}
+.songs-list{
+    margin-top: 20px;
+    background-color: #1b1b1b;
+    width: 75%;
+    border-radius: 20px;
+    padding: 30px ;
+    color: #00ffe7;
+    text-shadow: 0 0 5px #66fff2;
+    box-shadow: 0 0 10px #000000db;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.songs-list i:hover {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.item {
+    width: 90%;
+    border: 2px solid #66fff2 ;
+    box-shadow: 0 0 10px #00ffe7;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;    
+    margin: 0 auto;
+    cursor: pointer;
+}
+.item.active{
+    transform: scale(1.2,1.2);
+    text-shadow: 0 0 30px #00ffe7;
+}
+.songs-list i:hover {
+    transform: scale(1.2,1.2);
+    text-shadow: 0 0 30px #00ffe7;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+ 

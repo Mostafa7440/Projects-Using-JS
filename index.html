@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="content"> 
+        <div class="firstface" id="content">
+            <input type="file" id="fileInput" accept="audio/*" required>
+            <label for="fileInput" id="labalcontent">Upload Audio</label>
+            <button id="play">Play</button>
+        </div>
+        <div class="playerface">
+            <audio id="audio"></audio>
+            <div class="topcontent">
+                <h3>MUSIC PLAYER</h3>
+                <p id="songTitle"></p>
+            </div>
+            <div class="audiocontrol">
+                <div class="top">
+                    <i class="fas fa-backward back"></i>
+                    <span class="circle" id="circle"><i class="fas fa-pause" id="stopBtn"></i></span> 
+                    <i class="fas fa-forward forward"></i>
+                </div>
+                <div class="lineloading"><div class="after"></div></div>
+                <div class="timer">
+                    <div class="count">00:00</div>
+                    <div id="musicTime">00:00</div>
+                </div>
+                <div class="volume">
+                    <i class="fas fa-volume-up" id="volumeIcon"></i>
+                </div>
+            </div>
+            <div class="songs-list">
+                <div class="list" id="listOfItems">
+                    <div class="item" id="FirstSong"></div>
+                </div>
+                
+                <input type="file" id="songAddBtn" accept="audio/*" required>
+                <label for="songAddBtn"  id="addSong">
+                    <i class="fas fa-plus-circle"></i>
+                </label>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
